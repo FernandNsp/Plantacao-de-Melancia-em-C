@@ -12,6 +12,29 @@ int jogadas = 0;
 int semente = 0, agua = 5, adubo = 5, n = 2;
 char area[25][50];
 
+void informacoes(){
+	system("cls");
+	printf("\n INFORMA\200OES: \n");
+	printf(" [N] Na virada da noite chove\n\n");
+
+	printf(" [i]: Broto de Erva daninha\n");
+	printf(" [I]: Erva daninha\n");
+	printf(" [^]: Pedra\n\n");
+
+	printf(" [O]: Melancia madura\n");
+	printf(" [o]: Melancia verde\n");
+	printf(" [-]: Broto de melancia\n");
+	printf(" [+]: Cordao de melancia\n\n");
+	printf(" [~]: Local Irrigado\n\n");
+
+	printf(" [Fonte azul: DIA]\n [Fonte branca: NOITE]\n\n");
+	
+	printf(" - Irrigar: Em um local com buraco '.'\n - Semear: Em um local '~'\n");
+	printf(" - Adubar: Em um local '-' ou 'o'\n - Recolher: Local com 'o' ou 'O'\n");
+	printf(" - Ter agua: Recolher 'o' ou 'O'\n - Ter semente: Capinar 'i' ou 'I'\n");
+	printf(" - Ter adubo: Recolher 'o' ou 'O'\n - Na quinta jogada anoitece\n");
+}
+
 void inicializa(){
 	int a, b, c, d, erv, dan;
 	
@@ -69,8 +92,7 @@ void inicializa(){
 }
 
 void imprime(){
-	if(jogadas == 5) printf("                      +--[NOITE]--+\n");
-	printf("+-----------------[COLHEITA - MELANCIA]-----------------+\n");
+	printf("\n+----------------------------------------- [FAZENDINHA - MELANCIA] ---------------------------------------+\n");
 	printf("                        1                   2                   3                   4\n");
 	printf("   ");
 	
@@ -96,13 +118,13 @@ void imprime(){
 			printf(" %d", j);
 		}
 	}	
-	printf("\n\n   "); 
-	printf("- [%d] Sementes | [%d] Agua | [%d] Adubo | [%d] Noite -\n", semente, agua, adubo, n); 
+	printf("\n\n    Bolsa com objetos: ");
+	printf("[%d] Sementes / [%d] Agua / [%d] Adubo / [%d] Noite\n", semente, agua, adubo, n); 
 }
 
 void irrigar(){
 	if(agua > 0){
-		printf("[Linha|Coluna] = "); 
+		printf(" [Linha|Coluna] = "); 
 		scanf("%d%d", &lin, &col);
 		getchar();
 
@@ -112,22 +134,22 @@ void irrigar(){
 				agua--;
 			}
 			else{ //senao a escolha eh invalida e ele joga novamente
-				printf("[Opcao invalida]\n");
+				printf(" [Opcao invalida]\n");
 				jogadas--; 
 			}
 		}else{
-			printf("[Fora dos limites]\n");
+			printf(" [Fora dos limites]\n");
 			jogadas--;
 		}
 	}else{
-		printf("Saldo - [0] Agua\n");
+		printf(" Saldo - [0] Agua\n");
 		jogadas--; 
 	}
 }
 
 void semear(){
 	if(semente > 0){
-		printf("[Linha|Coluna] = ");
+		printf(" [Linha|Coluna] = ");
 		scanf("%d%d", &lin, &col);
 		getchar();
 
@@ -136,11 +158,11 @@ void semear(){
 				area[lin][col] = '-';
 				semente--;
 			}else{
-				printf("[Sem irrigacao no local]\n");
+				printf(" [Sem irrigacao no local]\n");
 				jogadas--; 
 			}
 		}else{
-			printf("[Fora dos limites]\n");
+			printf(" [Fora dos limites]\n");
 			jogadas--;
 		}
 	}else{
@@ -151,7 +173,7 @@ void semear(){
 
 void adubar(){
 	if(adubo > 0){
-		printf("[Linha|Coluna] = ");
+		printf(" [Linha|Coluna] = ");
 		scanf("%d%d", &lin, &col);
 		getchar();
 
@@ -165,15 +187,15 @@ void adubar(){
 					adubo--;
 				}
 			}else{
-			printf("[Sem Broto/Melancia verde no local]\n");
+			printf(" [Sem Broto/Melancia verde no local]\n");
 			jogadas--; 
 			}
 		}else{
-			printf("[Fora dos limites]\n");
+			printf(" [Fora dos limites]\n");
 			jogadas--;
 		}
 	}else{
-		printf("Saldo - [0] Adubo\n");
+		printf(" Saldo - [0] Adubo\n");
 		jogadas--; 
 	}
 }
@@ -181,7 +203,7 @@ void adubar(){
 void capinar(){
 	int a;
 	
-	printf("[Linha|Coluna] = ");
+	printf(" [Linha|Coluna] = ");
 	scanf("%d%d", &lin, &col);
 	getchar();
 
@@ -204,17 +226,17 @@ void capinar(){
 				semente++;
 			}
 		}else{
-			printf("[Sem Erva daninha/Cordao de melancia no local]\n");
+			printf(" [Sem Erva daninha/Cordao de melancia no local]\n");
 			jogadas--; 
 		}
 	}else{
-		printf("[Fora dos limites]\n");
+		printf(" [Fora dos limites]\n");
 		jogadas--;
 	}
 }//end capinar
 
 void recolher(){
-	printf("[Linha|Coluna] = ");
+	printf(" [Linha|Coluna] = ");
 	scanf("%d%d", &lin, &col);
 	getchar();	
 	if((lin >= 0 && lin <= 24) && (col >= 0 && col <= 49)){ 
@@ -230,11 +252,11 @@ void recolher(){
 				agua++;
 			}
 		}else{
-			printf("[Sem melancia Verde/Madura no local]\n");
+			printf(" [Sem melancia Verde/Madura no local]\n");
 			jogadas--; 
 		}
 	}else{
-		printf("[Fora dos limites]\n");
+		printf(" [Fora dos limites]\n");
 		jogadas--;
 	}
 }
@@ -384,17 +406,27 @@ void noite(){
 
 int main(int argc, char * argv[]){
 	srand(time(NULL));
+	informacoes();
 	inicializa();
 	char op = '.';
 	
 	while(op != 'f'){
+		printf("\n");
+		system("pause");
 		system("cls");
-		if(jogadas < 5) printf("                       +--[DIA]--+\n");
+
+		if(jogadas < 5) system("color 0b");
+		
 		imprime();
-		printf("\n[I]rrigar / [S]emear / [A]dubar / [C]capinar / [R]ecolher / [N]oite / [F]im \n[%d] Opcao = ", jogadas + 1);
+		printf("\n A\207oes: ");
+		printf("[I]rrigar / [S]emear / [A]dubar / [C]apinar / [R]ecolher / [N]oite / [F]im / [M]enu\n [%d] Jogada = ", jogadas + 1);
 		scanf(" %c", &op);
 		getchar();
 		
+		if(jogadas >= 5 || op == 'n'){
+			system("color 07");
+		}
+
 		switch(op){
 			case 'i':
 				irrigar();
@@ -418,21 +450,23 @@ int main(int argc, char * argv[]){
 				break;
 			case 'n': // Pode usar 2 vezes como ajuda no jogo
 				if(n > 0){
-					printf("[Passa por noite]\n");
-               if(op = 'n') printf("                      +--[NOITE]--+\n");
+					printf(" [Passa por noite]\n");
 					imprime();
 					n--;
 					noite();
 					jogadas++;
 				}else{
-					printf("[Saldo de Noite zerado]\n");
+					printf(" [Saldo de Noite zerado]\n");
 				}
 				break;
 			case 'f':
-				printf("\n[FIM DE JOGO]");
+				printf("\n [FIM DE JOGO]");
+				break;
+			case 'm':
+				informacoes();
 				break;
 			default:
-				printf("\n[Opcao invalida]\n");
+				printf("\n [Opcao invalida]\n");
 		}
 		
 		if(jogadas >= 5){
