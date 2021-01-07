@@ -31,7 +31,7 @@ void informacoes(){
 	
 	printf(" - Irrigar: Em um local com buraco '.'\n - Semear: Em um local '~'\n");
 	printf(" - Adubar: Em um local '-' ou 'o'\n - Recolher: Local com 'o' ou 'O'\n");
-	printf(" - Ter agua: Recolher 'o' ou 'O'\n - Ter semente: Capinar 'i' ou 'I'\n");
+	printf(" - Ter agua: Recolher 'o' ou 'O'\n - Ter semente: Capinar 'i', 'I' ou '+'\n");
 	printf(" - Ter adubo: Recolher 'o' ou 'O'\n - Na quinta jogada anoitece\n");
 }
 
