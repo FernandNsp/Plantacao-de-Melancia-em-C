@@ -3,7 +3,7 @@
  
  
  # 🍉 Modo de jogar
-  As ações do jogo acontecem pela escola do usuário ao clicar nas teclas (a, c, i, r, s, n), respectivamente são:
+  As ações do jogo acontecem pela escolha do usuário ao clicar nas teclas [a, c, i, r, s, n], respectivamente são:
   
   - Adubar
   
