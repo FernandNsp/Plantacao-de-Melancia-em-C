@@ -17,4 +17,4 @@
   
   - Noite: Toda noite chove, sendo assim, as ervas daninhas e plantas possuem uma porcentagem de crescimento, caso uma erva daninha creça a um bloco de distância da melancia a fruta morre. 
   
-  Jogando você irá percemer o nascimentos de '+' (cordão de melancia), ele tem uma porcentagem de chances de crescer ao lado de uma melancia madura, dá ao jogador 2 sementes e 2 quantidades de água.
+  Jogando você irá perceber o nascimentos de '+' (cordão de melancia), ele tem uma porcentagem de chances de crescer ao lado de uma melancia madura, dá ao jogador 2 sementes e 2 quantidades de água.
