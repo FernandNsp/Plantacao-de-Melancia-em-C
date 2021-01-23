@@ -1,5 +1,5 @@
 # 🍉 Jogo Melancia
- Trabalho do laboratório de Técnicas de Programação utilizando a linguag C.
+ Trabalho do laboratório de Técnicas de Programação utilizando a linguagem C.
  
  
  # 🍉 Modo de jogar
