@@ -1,5 +1,5 @@
 # 🍉 Jogo Melancia
- Trabalho do laboratório de Técnicas de Programação utilizando a linguagem C.
+ Projeto final do laboratório de Técnicas de Programação utilizando a linguagem C, desenvolvido utilizando as técnicas aprendidas durante o curso.
  
  ## 📑 Modo de jogar
   As ações do jogo acontecem pela escolha do usuário ao clicar nas teclas [i, s, a, r, c, n], respectivamente são:
