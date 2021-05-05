@@ -1,7 +1,7 @@
 # 🍉 Jogo Melancia
  Trabalho do laboratório de Técnicas de Programação utilizando a linguagem C.
  
- ## 🍉 Modo de jogar
+ ## 📑 Modo de jogar
   As ações do jogo acontecem pela escolha do usuário ao clicar nas teclas [i, s, a, r, c, n], respectivamente são:
   
   - Irrigar: primeira ação do jogo;
