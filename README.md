@@ -3,7 +3,7 @@
 <p align="center">
    <a href="#-Sobre">Sobre</a>&nbsp;&nbsp; | &nbsp;&nbsp;
    <a href="#-Modo-de-Jogar">Modo de Jogar</a>&nbsp;&nbsp; | &nbsp;&nbsp;
-   <a href="#-Prática">Observações</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+   <a href="#-Observações">Observações</a> &nbsp;&nbsp; | &nbsp;&nbsp;
    <a href="#-License">License</a>
 </p>
 
