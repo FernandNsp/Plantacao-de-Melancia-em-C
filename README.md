@@ -1,4 +1,10 @@
-# 🍉 Jogo Melancia
+<h1 align="center">Plantação de Melancia</h1>
+
+<p align="center">
+  <img alt="Imagem Melancia" src="github/plantacaoMelancia.png">
+</p>
+
+# 🍉 Sobre
  Projeto final do laboratório de Técnicas de Programação utilizando a linguagem C, desenvolvido utilizando as técnicas aprendidas durante o curso.
  
  ## 📑 Modo de jogar
@@ -14,6 +20,8 @@
 
   - Capinar: tem chances de pegar sementes, capina as ervas daninhas (i / I) e os cordões de melancia (+); 
   
-  - Noite: Toda noite chove, sendo assim, as ervas daninhas e plantas possuem uma porcentagem de crescimento, caso uma erva daninha creça a um bloco de distância da melancia a fruta morre. 
-  
-  Jogando você irá perceber o nascimentos de '+' (cordão de melancia), ele tem uma porcentagem de chances de crescer ao lado de uma melancia madura, dá ao jogador 2 sementes e 2 quantidades de água.
+  - Noite: Toda noite chove, sendo assim, as ervas daninhas e plantas possuem uma porcentagem de crescimento, caso uma erva daninha creça a um bloco de distância da melancia a fruta morre. Anoite também há chances das melancias amadurecerem.
+
+### 🔍 Observações
+  - A cada 5 jogadas anoitece automaticamente, sendo assim, na quarta jogada não precisa utilizar das noites que tem disponível;
+  - Jogando você irá perceber o nascimentos de '+' (cordão de melancia), ele tem uma porcentagem de chances de crescer ao lado de uma melancia madura, dá ao jogador 2 sementes e 2 quantidades de água.
