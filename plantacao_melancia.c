@@ -1,5 +1,5 @@
 //Trabalho Melancia - Prof(s): Thaty, Enzo, Gabriel;
-//Fernanda Pereira de Sene - 2020026330 (ECO);
+//Fernanda Pereira de Sene - (ECO);
 //09/07/2020;
 
 //Bibliotecas usadas
@@ -106,7 +106,7 @@ void imprime(){
 
 void irrigar(){
 	if(agua > 0){
-		printf("[Linha|Coluna] = "); 
+		printf("->  [Linha|Coluna] = "); 
 		scanf("%d%d", &lin, &col);
 		getchar();
 		if((lin >= 0 && lin <= 24) && (col >= 0 && col <= 49)){ 
@@ -115,22 +115,22 @@ void irrigar(){
 				agua--;
 			}
 			else{ //senao a escolha a invalida e ele joga novamente
-				printf("[Opcao invalida]\n");
+				printf("->  [Opcao invalida]\n");
 				jogadas--; //nao conta como jogada
 			}
 		}else{
-			printf("[Fora dos limites]\n");
+			printf("->  [Fora dos limites]\n");
 			jogadas--;
 		}
 	}else{
-		printf("Saldo - [0] Agua\n");
+		printf("->  Saldo - [0] Agua\n");
 		jogadas--; //nao conta como jogada
 	}
 }//end irrigar
 
 void semear(){
 	if(semente > 0){
-		printf("[Linha|Coluna] = ");
+		printf("->  [Linha|Coluna] = ");
 		scanf("%d%d", &lin, &col);
 		getchar();
 		if((lin >= 0 && lin <= 24) && (col >= 0 && col <= 49)){ 
@@ -138,22 +138,22 @@ void semear(){
 				area[lin][col] = '-';
 				semente--;
 			}else{
-				printf("[Sem irrigacao no local]\n");
+				printf("->  [Sem irrigacao no local]\n");
 				jogadas--; //nao conta como jogada
 			}
 		}else{
-			printf("[Fora dos limites]\n");
+			printf("->  [Fora dos limites]\n");
 			jogadas--;
 		}
 	}else{
-		printf("Saldo - [0] Sementes\n");
+		printf("->  Saldo - [0] Sementes\n");
 		jogadas--; //nao conta como jogada
 	}
 }//end semear
 
 void adubar(){
 	if(adubo > 0){
-		printf("[Linha|Coluna] = ");
+		printf("->  [Linha|Coluna] = ");
 		scanf("%d%d", &lin, &col);
 		getchar();
 		if((lin >= 0 && lin <= 24) && (col >= 0 && col <= 49)){ 
@@ -166,15 +166,15 @@ void adubar(){
 					adubo--;
 				}
 			}else{
-			printf("[Sem Broto/Melancia verde no local]\n");
+			printf("->  [Sem Broto/Melancia verde no local]\n");
 			jogadas--; //nao conta como jogada
 			}
 		}else{
-			printf("[Fora dos limites]\n");
+			printf("->  [Fora dos limites]\n");
 			jogadas--;
 		}
 	}else{
-		printf("Saldo - [0] Adubo\n");
+		printf("->  Saldo - [0] Adubo\n");
 		jogadas--; //nao conta como jogada
 	}
 }//end adubar
@@ -182,7 +182,7 @@ void adubar(){
 void capinar(){
 	int a;
 	
-	printf("[Linha|Coluna] = ");
+	printf("->  [Linha|Coluna] = ");
 	scanf("%d%d", &lin, &col);
 	getchar();
 	if((lin >= 0 && lin <= 24) && (col >= 0 && col <= 49)){ 
@@ -204,17 +204,17 @@ void capinar(){
 				semente++;
 			}
 		}else{
-			printf("[Sem Erva daninha/Cordao de melancia no local]\n");
+			printf("->  [Sem Erva daninha/Cordao de melancia no local]\n");
 			jogadas--; //nao conta como jogada
 		}
 	}else{
-		printf("[Fora dos limites]\n");
+		printf("->  [Fora dos limites]\n");
 		jogadas--;
 	}
 }//end capinar
 
 void recolher(){
-	printf("[Linha|Coluna] = ");
+	printf("->  [Linha|Coluna] = ");
 	scanf("%d%d", &lin, &col);
 	getchar();	
 	if((lin >= 0 && lin <= 24) && (col >= 0 && col <= 49)){ 
@@ -230,11 +230,11 @@ void recolher(){
 				agua++;
 			}
 		}else{
-			printf("[Sem melancia Verde/Madura no local]\n");
+			printf("->  [Sem melancia Verde/Madura no local]\n");
 			jogadas--; //nao conta como jogada
 		}
 	}else{
-		printf("[Fora dos limites]\n");
+		printf("->  [Fora dos limites]\n");
 		jogadas--;
 	}
 }//end recolher
@@ -425,14 +425,14 @@ int main(int argc, char * argv[]){
 					noite();
 					jogadas++; //Jogada e contada quando se usa noite
 				}else{
-					printf("[Saldo de Noite zerado]\n");
+					printf("->  [Saldo de Noite zerado]\n");
 				}
 			break;
 			case 'f':
-				printf("\n[FIM DE JOGO]");
+				printf("\n->  [FIM DE JOGO]\n");
 				break;
 			default:
-				printf("\n[Opcao invalida]\n");
+				printf("\n->  [Opcao invalida]\n");
 		}//end switch
 		if(jogadas >= 5){
 			imprime();
@@ -441,5 +441,5 @@ int main(int argc, char * argv[]){
 		}
 	}//end while
 
-return 0;
+	return 0;
 }//end main
